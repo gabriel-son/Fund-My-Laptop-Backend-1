@@ -22,7 +22,7 @@ module.exports = async function (req, res, next) {
         /*
          **valid token, giving client access to resource
          */
-        req.token = tokenProvidedByUser;
+        req.body.token = tokenProvidedByUser;
         next();
       }
     } catch (err) {
